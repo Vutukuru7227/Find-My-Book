@@ -1,0 +1,75 @@
+﻿@using WPLMVC.Models
+@model LoginViewModel
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+        <div class="signup-page">
+            <div class="wrapper">
+                <div class="header header-filter" style="background-image: url('http://vignette4.wikia.nocookie.net/olympians/images/b/b1/LA.jpeg/revision/latest?cb=20150303212850'); background-size: cover; background-position: top center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+                                <div class="card card-signup">
+                                    <form class="form" action="Register" method="get">
+                                        <div class="header header-primary text-center">
+                                            <h4>Sign Up</h4>
+                                            <div class="social-line">
+                                                <a href="#pablo" class="btn btn-simple btn-just-icon">
+                                                    <i class="fa fa-facebook-square"></i>
+                                                </a>
+                                                <a href="#pablo" class="btn btn-simple btn-just-icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                                <a href="#pablo" class="btn btn-simple btn-just-icon">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <p class="text-divider">Or Be Classical</p>
+                                        <div class="content">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span class="material-icons">email</span>
+                                                </div>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Username</label>
+                                                    <input type="text" class="form-control validate" name="UserName" required />
+                                                    <span class="material-icons form-control-feedback">clear</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <span class="material-icons">lock_outline</span>
+                                                </div>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Password</label>
+                                                    <input type="password" class="form-control validate" name="Password" required />
+                                                    <span class="material-icons form-control-feedback">clear</span>
+                                                </div>
+                                            </div>
+                                            @*<div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <span class="material-icons">lock_outline</span>
+                                                    </div>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Password</label>
+                                                        <input type="password" class="form-control" name="Password" required>
+                                                    </div>
+                                                </div>*@
+                                            </div>
+                                                    <br />
+                                                    <br />
+                                                    <div class="footer text-center">
+                                                        <button type="submit" class="btn btn-success">Submit</button>
+                                                    </div>
+                                                    <br />
+                                                </form>
+                                            </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                           </div>
+                       </div>
+}
